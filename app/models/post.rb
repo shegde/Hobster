@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :title, :content:, :price, :city, :state
+  attr_accessible :title, :content, :price, :city, :state
   
   belongs_to :user
   

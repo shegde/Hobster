@@ -2,7 +2,9 @@ Hobster::Application.routes.draw do
   # get "pages/about"
 
   # get "pages/home"
-
+  resources :users
+  resources :posts, :only => [:create, :destroy]
+  
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
   match '/signout', :to => 'sessions#destroy'

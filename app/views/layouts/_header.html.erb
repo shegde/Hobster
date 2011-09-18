@@ -3,11 +3,9 @@
         <nav class="round">
           <ul>
             <li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "About", '#' %></li>   
-			<% if current_user %>
-				<li>
-					<%= link_to "SignOut", signout_path, :method => :delete %>
-				</li>
+            <% if current_user %>
+				<li><%= link_to "Profile", '#' %></li>   
+				<li><%= link_to "SignOut", signout_path, :method => :delete %></li>
 			<% end %>         
           </ul>
         </nav>

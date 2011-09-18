@@ -4,7 +4,7 @@
           <ul>
             <li><%= link_to "Home", root_path %></li>
             <% if current_user %>
-				<li><%= link_to "Profile", '#' %></li>   
+				<li><%= link_to "Profile", profile_path %></li>   
 				<li><%= link_to "SignOut", signout_path, :method => :delete %></li>
 			<% end %>         
           </ul>

@@ -8,6 +8,7 @@ Hobster::Application.routes.draw do
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
   match '/signout', :to => 'sessions#destroy'
+  match '/profile', :to => 'pages#profile'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

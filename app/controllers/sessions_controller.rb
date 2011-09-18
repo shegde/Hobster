@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
     # Log the authorizing user in.
     self.current_user = @auth.user
     
-    render :text => "Welcome, #{current_user.name}."
+    # render :text => "Welcome, #{current_user.name}."
+    redirect_to root_path
   end
   
   def failure

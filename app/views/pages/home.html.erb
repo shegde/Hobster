@@ -2,6 +2,20 @@
 
 	<p> Welcome,<%= current_user.name %> </p>
 	<%= link_to "Wanna Teach?", new_post_path, {:action => "new", :class => "create_button round" } %>
-
+	
+	
+	<% if current_user.posts.count > 0 %>
+		<p> Post count: <%= current_user.posts.count %> </p>
+		<p> Teach posts: </p>
+		<% @posts = current_user.posts.all %>
+		<%= @posts %> <br>
+		<% @posts.each do |post| %>
+			<%= link_to post.title, post_path(:id), {:action => "show"} %> | 
+			<%= link_to "edit", post_path(:id), {:action => "edit"} %> | 
+			<%= link_to "delete", post_path(:id) %><br>
+		<% end %>
+	<% end %>
+	
+	
 <% end %>
 

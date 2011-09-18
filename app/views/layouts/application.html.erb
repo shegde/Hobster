@@ -6,13 +6,20 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag 'custom', :media => 'screen' %>
+  <%= stylesheet_link_tag 'blueprint', :media => 'screen' %>
 </head>
 <body>
-	<%= debug params if Rails.env.development? %>
+	<div class="container">
 	<%= render 'layouts/header' %>
 	<%= render 'layouts/authprovider' %>
 	<section class="round">
+		<% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
 		<%= yield %>
 	</section>
+	
+	<%= debug params if Rails.env.development? %>
+	</div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   def create
-        # render :text => request.env['omniauth.auth'].inspect
-    auth = request.env['rack.auth']
+    # render :text => request.env['omniauth.auth'].inspect
+    auth = request.env['omniauth.auth']
     unless @auth = Authorization.find_from_hash(auth)
       # Create a new user or add an auth to existing user, depending on
       # whether there is already a user signed in.
@@ -13,11 +13,11 @@ class SessionsController < ApplicationController
     render :text => "Welcome, #{current_user.name}."
   end
   
-  # def failure
-  #  render :text => "cannot connect to server! Please try again."
-    # redirect_to root_path
-  # end
-  
+  def failure
+    # render :text => "cannot connect to server! Please try again."
+    redirect_to root_path
+  end
+
   def destroy
     session[:user_id] = nil
     redirect_to root_path

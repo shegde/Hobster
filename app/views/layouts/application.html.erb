@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Hobster</title>
-  <%= stylesheet_link_tag :all %>
+  <!-- <%= stylesheet_link_tag :all %> -->
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag 'custom', :media => 'screen' %>
 </head>
 <body>
-	<%= debug params %>
+	<%= debug params if Rails.env.development? %>
 	<%= render 'layouts/header' %>
 	<%= render 'layouts/authprovider' %>
 	<section class="round">

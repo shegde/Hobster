@@ -13,10 +13,10 @@ class SessionsController < ApplicationController
     render :text => "Welcome, #{current_user.name}."
   end
   
-  def failure
-    render :text => "cannot connect to server! Please try again."
+  # def failure
+  #  render :text => "cannot connect to server! Please try again."
     # redirect_to root_path
-  end
+  # end
   
   def destroy
     session[:user_id] = nil

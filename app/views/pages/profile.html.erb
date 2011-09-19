@@ -6,7 +6,7 @@
 		<% @posts = current_user.posts.all %>
 		<% @posts.each do |post| %>
 			<%= link_to post.title, post_path(post.id), {:action => "show"} %> | 
-			<%= link_to "edit", post_path(:id), {:action => "edit"} %> | 
+			<%= link_to "edit", post_path(post.id), {:action => "edit"} %> | 
 			<%= link_to "delete", post_path(:id) %><br>
 		<% end %>
 <% end %>

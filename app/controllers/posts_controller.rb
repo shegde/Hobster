@@ -16,13 +16,24 @@ class PostsController < ApplicationController
       flash[:success] = "post created!"
       redirect_to profile_path
     else
-      flash[:error] = "post not created!!!"
+      flash[:error] = "post not created !!!"
       render :action => 'new'
     end  
   end
   
   def edit
-    
+    @post = Post.find(params[:id])
+  end
+  
+  def update
+    @post = Post.find(params[:id])
+    if @post.update_attributes!(params[:post])
+      flash[:success] = "post created!"
+      render :action => 'show', :id => @post
+    else 
+      flash[:error] = "post not updated !!!"
+      render :action => 'edit'
+    end
   end
   
   def show

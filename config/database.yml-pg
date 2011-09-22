@@ -1,13 +1,13 @@
-# postgresql. Versions 7.4 and 8.x are supported.
+# PostgreSQL. Versions 7.4 and 8.x are supported.
 #
-# Install the postgresql driver:
-#   gem install postgresql
+# Install the pg driver:
+#   gem install pg
 # On Mac OS X with macports:
-#   gem install postgresql -- --with-postgresql-config=/opt/local/lib/postgresql84/bin/postgresql_config
+#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
 # On Windows:
-#   gem install postgresql
+#   gem install pg
 #       Choose the win32 build.
-#       Install postgresql and put its /bin directory on your path.
+#       Install PostgreSQL and put its /bin directory on your path.
 development:
   adapter: postgresql
   encoding: unicode

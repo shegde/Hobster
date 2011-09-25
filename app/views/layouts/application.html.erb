@@ -12,7 +12,9 @@
 <body>
 
 	<%= render 'layouts/header' %>
-	<%= render 'layouts/authprovider' %>
+	<% if !current_user %>
+		<%= render 'layouts/authprovider' %>
+	<% end %>
 	<section class="round">
 		<% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>

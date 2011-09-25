@@ -6,6 +6,6 @@ class Post < ActiveRecord::Base
   validates_presence_of :title, :content, :price, :city, :state;
   validates :title, :length => { :maximum => 140 }
   validates :content, :length => { :maximum => 500 }
-  # validates_format_of :price, :format => { :with => /^\d+(\.\d{0,2})?$/, :message => "Enter $AB.CD" }
+  validates_format_of :price, :with => /^\d+(\.\d{0,2})?$/
   validates :state, :length => { :maximum => 2 }
 end

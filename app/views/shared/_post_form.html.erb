@@ -1,26 +1,11 @@
-<%= form_for @post, :html => { :class => "form_field" } do |f| %>
+<%= simple_form_for @post do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-  <div id="title_field">
-  	Title<br>
-    <%= f.text_field :title, :html => { :id => "title_fd"} %><br>
-  </div>
-  <div id="content_field">
-    Content<br>
-    <%= f.text_area :content %><br>
-  </div>
-  <div id="price_field">
-    Price<br>
-    <%= f.text_field :price %><br>
-  </div>
-  <div id="city_field">
-    City<br>
-    <%= f.text_field :city %><br>
-  </div>
-  <div id="state_field">
-    State<br>
-    <%= f.text_field :state %><br>
-  </div>
-  <div id="actions">
-    <%= f.submit "Submit" %>
-  </div>
+  
+  <%= f.input :title %>
+  <%= f.input :content %>
+  <%= f.input :price, :placeholder => '$', :hint => "prices should be in USD"%>
+  <%= f.input :city %>
+  <%= f.input :state, :placeholder => 'MA' %>
+  <%= f.button :submit %>
+  
 <% end %>

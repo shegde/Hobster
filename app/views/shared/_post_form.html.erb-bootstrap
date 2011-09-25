@@ -1,0 +1,51 @@
+<%= form_for @post do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <fieldset>
+  <div class="clearfix">
+  	<label>Title</label>
+  	
+    <%= f.text_field :title, :id => "xlInput", :class => "xlarge", :name => "xlInput", :size => "100" %>
+   	
+  </div>
+  
+  <div class="clearfix">
+  	<label>Content</label>
+  	
+    <%= f.text_area :content, :id => "textarea", :class => "xlarge", :name => "xlInput" %>
+   	
+  </div>
+  
+  <div class="clearfix">
+  	<label>City</label>
+  	
+    <%= f.text_area :content, :id => "textarea", :class => "xlarge", :name => "xlInput" %>
+   	
+  </div>
+  <!--
+  <div id="content_field">
+    Content<br>
+    <%= f.text_area :content %><br>
+  </div>
+  <div id="price_field">
+    Price<br>
+    <%= f.text_field :price %><br>
+  </div>
+  <div id="city_field">
+    City<br>
+    <%= f.text_field :city %><br>
+  </div>
+  <div id="state_field">
+    State<br>
+    <%= f.text_field :state %><br>
+  </div>
+  <div id="actions">
+    <%= f.submit "Submit" %>
+  </div>
+  -->
+  
+  <div class="actions">
+  	<%= f.submit "Submit", :class => "btn primary" %>
+  </div>
+  
+  </fieldset>
+<% end %>

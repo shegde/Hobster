@@ -4,4 +4,10 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
+#begin
+#  require 'thinking_sphinx/tasks'
+#rescue LoadError
+#  puts "You can't load Thinking Sphinx tasks unless the thinking-sphinx gem is installed."
+#end
+
 Hobster::Application.load_tasks

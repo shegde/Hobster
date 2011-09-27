@@ -1,0 +1,6 @@
+<% form_tag posts_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search" %>
+	</p>
+<% end %>

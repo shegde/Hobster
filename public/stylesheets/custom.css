@@ -61,6 +61,7 @@ nav ul li a:hover {
     border-style: solid;
     border-color: black;
   	float: right;
+  	
 }
 .auth_provider_group p {
 	font-size: 10px;

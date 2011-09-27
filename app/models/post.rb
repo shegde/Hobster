@@ -8,4 +8,11 @@ class Post < ActiveRecord::Base
   validates :content, :length => { :maximum => 500 }
   validates_format_of :price, :with => /^\d+(\.\d{0,2})?$/
   validates :state, :length => { :maximum => 2 }
+  
+  #indexes for Sphinx plugin
+  #define_index do
+   # indexes content
+    #indexes title
+   # indexes city
+  #end
 end

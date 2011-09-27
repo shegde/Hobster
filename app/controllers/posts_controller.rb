@@ -47,4 +47,9 @@ class PostsController < ApplicationController
   def destroy
     
   end
+  
+  # define index action for search using sphinx
+  def index
+    @posts = Post.search params[:search]
+  end
 end

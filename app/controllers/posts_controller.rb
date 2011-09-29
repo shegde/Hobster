@@ -48,8 +48,12 @@ class PostsController < ApplicationController
     
   end
   
-  # define index action for search using sphinx
   def index
-    @posts = Post.search params[:search]
+    @search = Post.search(params[:search])
+    @posts = @search.all
+  end
+  
+  def search
+      @posts = Post.search(params[:search])
   end
 end

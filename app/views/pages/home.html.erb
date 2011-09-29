@@ -2,9 +2,6 @@
 	<p> Welcome, <%= current_user.name %> </p>
 	<%= link_to "Wanna Teach?", new_post_path, {:action => "new", :class => "create_button round" } %>
 	
-	
-	
-	
-	
+	<%= render 'shared/search_form' %>
 <% end %>
 

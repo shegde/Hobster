@@ -1,0 +1,8 @@
+<h2>Search Results</h2>
+<% if @posts %>
+<% for post in @posts %>
+	<%= link_to post.title, post %>
+	<%= post.user.name %>
+	<br>
+<% end %>
+<% end %>

@@ -3,12 +3,13 @@ Hobster::Application.routes.draw do
 
   # get "pages/home"
   resources :users
-  resources :posts, :only => [:new, :create, :destroy, :show, :edit]
+  resources :posts, :only => [:new, :create, :destroy, :show, :edit, :index]
   
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
   match '/signout', :to => 'sessions#destroy'
   match '/profile', :to => 'pages#profile'
+  match '/search', :to => 'posts#search'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

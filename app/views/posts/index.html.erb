@@ -1,0 +1,13 @@
+<h2>Search results</h2>
+
+<%= form_for @search do |f| %>
+	<p>
+		<%= f.text_field :title_contains %>
+	</p>
+	<p class = "button"> <%= f.submit %></p>
+	
+<% end %>
+
+<% for post in @posts %>
+	<h3><%= link_to post.title, post %></h3>
+<% end %>

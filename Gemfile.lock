@@ -163,6 +163,8 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    twitter_bootstrap_form_for (1.0.1)
+      rails (~> 3)
     tzinfo (0.3.29)
 
 PLATFORMS
@@ -177,3 +179,4 @@ DEPENDENCIES
   rails (= 3.0.9)
   simple_form
   taps
+  twitter_bootstrap_form_for

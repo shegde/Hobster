@@ -1,11 +1,21 @@
+<div class="container">
+			 <div class="hero-unit">
+				<h1>Create a teach post</h1>
+			</div>
+			
+</div>
+
+<div class="container">
+	
 <%= simple_form_for @post do |f| %>
-  <%= render 'shared/error_messages', :object => f.object %>
-  
-  <%= f.input :title %>
-  <%= f.input :content %>
-  <%= f.input :price, :placeholder => '$', :hint => "prices should be in USD"%>
-  <%= f.input :city %>
-  <%= f.input :state, :placeholder => 'MA' %>
-  <%= f.button :submit %>
-  
+	<%= render 'shared/error_messages' %>
+	<%= f.input :title %>
+	<%= f.input :content, :as => :text, :input_html => { :rows => "4" } %>
+	<%= f.input :price, :placeholder => "$", :hint => "price should be in USD", :input_html => { :size => "4" } %>
+	<%= f.input :city %>
+	<%= f.input :state %>
+	<%= f.submit 'Create'%>
 <% end %>
+</div>
+
+

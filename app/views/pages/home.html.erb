@@ -1,7 +1,20 @@
-<% if current_user %>
+<!-- <% if current_user %>
 	<p> Welcome, <%= current_user.name %> </p>
-	<%= link_to "Wanna Teach?", new_post_path, {:action => "new", :class => "create_button round" } %>
-	
-	<%= render 'shared/search_form' %>
+	<%= link_to "Wanna Teach?", new_post_path, {:action => "new", :class => "create_button round" } %>	
 <% end %>
+<%= render 'shared/search_form' %>
+-->
+<div class="container">
+			 <div class="hero-unit">
+				<h1>Hobster</h1>
+		          <p class="lead">
+		           helps you find people in your locality who can teach you new and interesting hobbies<br />
+		          </p>
+		          <p><strong>Learn what you love!</strong>
+		          <strong><%= link_to "Teach some thing today!", new_post_path %></strong></p>
 
+		          
+			</div>
+			
+			<%= render 'shared/search_form' %>
+</div>

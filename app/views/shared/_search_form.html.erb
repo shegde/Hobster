@@ -1,16 +1,8 @@
 
 <%= form_tag search_path, :method => 'get', :url => { :action => "search" } do %>
-					                    <div class="clearfix"> 
-					                        <div class="input"> 
-					                            <input class="xlarge" type="text" placeholder="Enter a hobby"/> 
-					                        </div> 
-					                    </div> 
-					                    <div class="clearfix"> 
-					                        <div class="input"> 
-					                            <input type="text" placeholder="City,State or Zip"/> 
-					                        </div> 
-					                    </div> 
-					                    <div class="actions"> 
-					                        <button class="btn primary">Search</button> 
-					                    </div> 
+	
+	<%= text_field_tag :search, params[:search], :placeholder => "Enter a hobby"%>
+	<%= text_field_tag :place, params[:place], :placeholder => "City, State or Zip"%>
+	<%= submit_tag "Search", :title => nil, :id => "search_button" %>
+	
 <% end %>

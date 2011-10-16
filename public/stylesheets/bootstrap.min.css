@@ -370,4 +370,10 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner{padding:0;
 }
 /* END Simple_form settings */
 
-
+#search_button {
+  margin-left: 0px;
+  width: 80px;
+  text-align: center;
+  color:#ffffff;
+  background-color:#0064cd
+}

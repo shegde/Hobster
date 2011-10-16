@@ -1,8 +1,14 @@
-<h2>Search Results</h2>
+<div class="container">
+	<div class="hero-unit">
+		<h3>Search Results</h3>
+
 <% if @posts %>
-<% for post in @posts %>
-	<%= link_to post.title, post %>
-	<%= post.user.name %>
-	<br>
+	<% for post in @posts %>
+		<h3><%= link_to post.title, post %></h3>
+		<%= post.user.name %>
+	<% end %>
+<% else %>
+	<h3>Sorry! No teachers could be found!</h3>
 <% end %>
-<% end %>
+
+</div>

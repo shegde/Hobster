@@ -6,20 +6,20 @@ class PostsController < ApplicationController
     @post = Post.new
     
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
     end
   end
   
   def create
-    @post = current_user.posts.build(params[:post])
-    if @post.save
-      flash[:success] = "post created!"
-      redirect_to profile_path
-    else
-      flash[:error] = "post not created !!!"
-      render :action => 'new'
-    end  
-  end
+      @post = current_user.posts.build(params[:post])
+        if @post.save
+          flash[:success] = "post created!"
+          redirect_to profile_path
+        else
+          flash[:error] = "post not created !!!"
+          render :action => 'new'
+        end
+end
   
   def edit
     @post = Post.find(params[:id])

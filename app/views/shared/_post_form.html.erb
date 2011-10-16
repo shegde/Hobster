@@ -10,7 +10,7 @@
 	<%= render 'shared/error_messages' %>
 	<%= f.input :title %>
 	<%= f.input :content, :as => :text, :input_html => { :rows => "4" } %>
-	<%= f.input :price, :placeholder => "$", :hint => "price should be in USD", :input_html => { :size => "4" } %>
+	<%= f.input :price, :placeholder => "$", :hint => "price should be in USD, per lesson", :input_html => { :size => "4" } %> 
 	<%= f.input :city %>
 	<%= f.input :state %>
 	<%= f.submit 'Create'%>

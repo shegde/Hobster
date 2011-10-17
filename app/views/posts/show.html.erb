@@ -1,18 +1,23 @@
 <div class="container">
 	<div class="hero-unit">
-
-	<h2><%= @post.title %></h2> by <%= link_to @post.user.name, profile_path %>
-	<h3>Location: <%= @post.city %>, <%= @post.state %> </h3>
-	<p><strong><%= @post.content %></p>
-	<% if @post.price.to_i > 0 %>
-		<h3>$ <%= @post.price %> per lesson</h3>
-	<% else %>
-		<h3>Free!</h3>
-		
-	<% end %>
+	
+			<h2><%= @post.title %></h2> by <%= link_to @post.user.name, profile_path %>
+	</div>
+	
+	<div class=span12>
+			<h3>Location: <%= @post.city %>, <%= @post.state %> </h3>
+			<p><strong><%= @post.content %></p>
+				<% if @post.price.to_i > 0 %>
+					<h3>$ <%= @post.price %> per lesson</h3>
+				<% else %> <h3>Free!</h3>
+				<% end %> 
+	
+	</div>
+	<div class=span2>
+		<a class="btn primary large">REGISTER</a>
+	</div>
 </div>
 
-<%= link_to "HOME", root_path %>
-</div>
+
 
 

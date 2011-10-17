@@ -13,17 +13,16 @@
 
 	<%= render 'layouts/header' %>
 	
-	<!--
-	<section class="round">
+	
+	
+		<%= yield %>
+	
+	<div class="round">
 		<% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
         <% end %>
-   -->
-		<%= yield %>
-		
-	<!--	
-	</section>
-	-->
+    </div>
+    
 	<%= debug params if Rails.env.development? %>
 
 </body>

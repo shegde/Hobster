@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     self.current_user = @auth.user
     
     # render :text => "Welcome, #{current_user.name}."
-    # flash.now[:success] = "Welcome, #{current_user.name}."
+    flash.now[:success] = "Welcome, #{current_user.name}."
     redirect_to root_path
   end
   

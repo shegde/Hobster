@@ -5,6 +5,9 @@
 </div>
 
 <div class="container">
+	<% if !current_user %>
+	<%= render 'shared/error' %> <!-- please login before creating post message-->
+	<% end %>
 	
 <%= simple_form_for @post do |f| %>
 	<%= render 'shared/error_messages' %>

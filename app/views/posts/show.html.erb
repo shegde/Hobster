@@ -13,9 +13,11 @@
 				<% end %> 
 	
 	</div>
+	<% if !current_user || current_user.id != @post.user.id %>
 	<div class=span2>
 		<a class="btn primary large">REGISTER</a>
 	</div>
+	<% end %>
 </div>
 
 

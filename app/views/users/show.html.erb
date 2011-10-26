@@ -1,9 +1,9 @@
 <div class="container">
 	<div class="hero-unit">
+
 		<h2> <%= @user.name %>'s Profile</h2>
 	
 		<% if @user.posts.count > 0 %>
-		<!-- <p><h2>You have <%= current_user.posts.count %> posts.</h2></p> -->
 			<% @posts = @user.posts.all %>
 			<% @posts.each do |post| %>
 			<ul>

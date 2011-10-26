@@ -1,10 +1,10 @@
 <div class="container">
 	<div class="hero-unit">
-		<h2> <%= current_user.name %>'s Profile</h2>
+		<h2> <%= @user.name %>'s Profile</h2>
 	
-		<% if current_user.posts.count > 0 %>
+		<% if @user.posts.count > 0 %>
 		<!-- <p><h2>You have <%= current_user.posts.count %> posts.</h2></p> -->
-			<% @posts = current_user.posts.all %>
+			<% @posts = @user.posts.all %>
 			<% @posts.each do |post| %>
 			<ul>
 				<h3><%= link_to post.title, post_path(post.id), {:action => "show"} %></h3> 

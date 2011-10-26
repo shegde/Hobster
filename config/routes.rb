@@ -11,7 +11,7 @@ Hobster::Application.routes.draw do
   match '/profile', :to => 'pages#profile'
   match '/search', :to => 'posts#search'
   
-  match "/profile1/:id", :to => 'users#show'
+  match "/user/:id", :as => 'new_profile', :to => 'users#show'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

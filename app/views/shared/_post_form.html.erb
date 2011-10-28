@@ -14,6 +14,7 @@
 	<%= f.input :title %>
 	<%= f.input :content, :as => :text, :input_html => { :rows => "4" } %>
 	<%= f.input :price, :placeholder => "$", :hint => "price should be in USD, per lesson", :input_html => { :size => "6" } %> 
+	<%= f.input :address %>
 	<%= f.input :city %>
 	<%= f.input :state %>
 	<%= f.submit 'Create'%>

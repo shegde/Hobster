@@ -5,13 +5,17 @@
 	</div>
 	
 	<div class=span12>
-			<h3>Location: <%= @post.city %>, <%= @post.state %> </h3>
+			<h3>Location: 
+				<% if @post.address %> <%= @post.address %>, <%end %> 
+				<%= @post.city %>, <%= @post.state %> </h3>
 			<p><strong><%= @post.content %></p>
 				<% if @post.price.to_i > 0 %>
 					<h3>$ <%= @post.price %> per lesson</h3>
 				<% else %> <h3>Free!</h3>
-				<% end %> 
-	
+				<% end %>
+			<div id="map">
+			<p>MAP<p>
+			</div>
 	</div>
 	<% if !current_user || current_user.id != @post.user.id %>
 	<div class=span2>

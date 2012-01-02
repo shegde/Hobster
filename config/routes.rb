@@ -1,4 +1,6 @@
 Hobster::Application.routes.draw do
+  resources :registrations
+
   # get "pages/about"
 
   # get "pages/home"
@@ -10,6 +12,7 @@ Hobster::Application.routes.draw do
   match '/signout', :to => 'sessions#destroy'
   match '/profile', :to => 'pages#profile'
   match '/search', :to => 'posts#search'
+  
   
   match "/user/:id", :as => 'new_profile', :to => 'users#show'
   # The priority is based upon order of creation:

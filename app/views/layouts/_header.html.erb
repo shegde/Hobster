@@ -14,10 +14,9 @@
 <div class="topbar">
 		  <div class="fill">
 		    <div class="container">
-		      <h3><%= link_to "Hobster", root_path %></h3>
 		        <ul class="nav">
-		          <li><a href="#about">About</a></li>
 		          <li><%= link_to "Home", root_path %></li>
+		          <li><a href="#about">About</a></li>
 		          <% if current_user %>
 		          	<li><%= link_to "Profile", profile_path %></li>
 		          	<li><%= link_to "SignOut", signout_path, :method => :delete %></li>

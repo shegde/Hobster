@@ -1,6 +1,4 @@
 Hobster::Application.routes.draw do
-  resources :registrations
-
   # get "pages/about"
 
   # get "pages/home"

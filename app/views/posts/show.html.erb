@@ -19,8 +19,8 @@
 	</div>
 	<% if current_user && current_user.id != @post.user.id %>
 	<div class=span2>
-		<%= link_to "REGISTER", html_options = { :class => "btn primary large" }, 
-		new_registration_path(current_user.id, @post.id) %>
+		<%= link_to "REGISTER", html_options = { :class => "btn primary large" }
+		 %>
 	</div>
 	<% end %>
 </div>
